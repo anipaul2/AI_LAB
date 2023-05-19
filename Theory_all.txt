@@ -1,0 +1,116 @@
+---exp4---
+
+O.1: Understand Best First Search, Informed Searches.
+
+AIM: Write a Program to Implement Pure Heuristic Search (A*) using Python in AI.
+
+
+
+THEORY:
+
+Heuristic: Problem-specific knowledge that (tries to) lead the search algorithm faster towards a goal state. Often implemented via heuristic function h( n ).  Heuristic search is an attempt to search the most promising paths first. Uses heuristics, or rules of thumb, to find the best node to expand next.
+
+A* search is the most commonly known form of best-first search. It uses heuristic function h( n ), and cost to reach the node n from the start state g( n ). It has combined features of UCS and greedy best-first search, by which it solve the problem efficiently. A* search algorithm finds the shortest path through the search space using the heuristic function. This search algorithm expands less search tree and provides optimal result faster. A* algorithm is similar to UCS except that it uses g( n )+h ( n ) instead of g( n ).
+
+In A* search algorithm, we use the search heuristic as well as the cost to reach the node. Hence we can combine both costs as following, and this sum is called as a fitness number.
+
+
+f(n) = g(n) + h(n)
+
+
+
+---exp5---
+
+EXPERIMENT 5 MANUAL
+CO1: Decide and implement an appropriate graph algorithm and hashing function in computer networks for data security.
+
+
+
+AIM: Write a Python Program to Implement Branch and Bound Algorithms in AI.
+
+
+THEORY: 
+
+Travelling Salesman Problem (TSP): Given a set of cities and distances between every pair of cities, the problem is to find the shortest possible route that visits every city exactly once and returns to the starting point. 
+
+Note the difference between Hamiltonian Cycle and TSP. The Hamiltonian cycle problem is to find if there exists a tour that visits every city exactly once. Here we know that Hamiltonian Tour exists (because the graph is complete) and in fact, many such tours exist, the problem is to find a minimum weight Hamiltonian Cycle. 
+
+For example, consider the graph shown in the figure on the right side. A TSP tour in the graph is 1-2-4-3-1. The cost of the tour is 10+25+30+15 which is 80.
+
+The problem is a famous NP-hard problem. There is no polynomial-time known solution for this problem.  
+
+
+---exp6---
+
+
+CO.1: Understand 8-Puzzle.
+
+
+
+AIM: Write a Program to Implement 8-Puzzle problem using Python
+
+
+
+THEORY :
+
+The 8 puzzle problem solution is covered in this article. A 3 by 3 board with 8 tiles (each tile has a number from 1 to 8) and a single empty space is provided. The goal is to use the vacant space to arrange the numbers on the tiles such that they match the final arrangement. Four neighbouring (left, right, above, and below) tiles can be moved into the available area.
+
+
+
+---exp8---
+
+CO1: Python loops and functions.
+
+AIM: Write a program to implement the Hangman game using python.
+
+
+
+THEORY:
+
+A Hangman Game On Python is about guessing letters (A-Z) to form the words. If the player guesses the right letter that is within the word, the letter appears at its correct position. The user has to guess the correct word until a man is hung, and then the game is over. The Hangman Game In Python is written in a python programming language, In this Hangman Game Project is to implement the Hangman Game Using Python. It doesn’t require any specific modules other than random and time. Python loops and functions are enough to build this game here
+
+
+---exp9---
+
+EXPERIMENT 9 MANUAL
+CO1: understand memorization.
+
+AIM: Write a python program to implement Water Jug Problem. THEORY:
+
+A Water Jug Problem: You are given two jugs, a 4-gallon one and a 3-gallon one, a pump which has unlimited water which you can use to fill the jug, and the ground on which water may be poured. Neither jug has any measuring markings on it. How can you get exactly 2 gallons of water in the 4-gallon jug?
+
+Let X represent the content of the water in a 4-gallon jug. Let Y represent the content of the water in a 3-gallon jug.
+
+Write a program in python to define a set of operators (Rules) that will take us from one state to another:
+
+Start from initial state (X=0, Y=0) Reach any of the Goal states
+
+ 
+
+(X=2, Y=0)
+
+(X=2, Y=1)
+
+(X=2, Y=2)
+
+ 
+
+(X=2, Y=3)
+
+Find the minimum number of steps to reach any the above-mentioned goal states.
+
+Approach: An approach using BFS has been discussed in the previous post. In this post an approach using memoization and recursion has been discussed. At any point, there can be a total of six possibilities:
+
+·        Empty the first jug completely
+
+·        Empty the second jug completely
+
+·        Fill the first jug
+
+·        Fill the second jug
+
+·        Fill the water from the second jug into the first jug until the first jug is full or the second jug has no water left
+
+·        Fill the water from the first jug into the second jug until the second jug is full or the first jug has no water left
+
+Approach: Using Recursion, visit all the six possible moves one by one until one of them returns True. Since there can be repetitions of same recursive calls, hence every return value is stored using memoization to avoid calling the recursive function again and returning the stored value.
